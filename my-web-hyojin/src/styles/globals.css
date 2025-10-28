@@ -1,4 +1,32 @@
 @import "tailwindcss";
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shaking {
+  from { opacity: 0; }
+  0% {
+    transform: rotateX(0);
+  }
+  20% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(10deg);
+  }
+  80% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
 
 
 :root {

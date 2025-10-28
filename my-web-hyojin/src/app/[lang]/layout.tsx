@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { parseLang } from '@/i18n/utils';
 import Header from '../../components/Header';
 import '@/styles/globals.css';
+import CursorWithStars from '@/app/[lang]/components/CursorWithStars';
 
 interface Props {
   children: ReactNode;
@@ -14,6 +15,7 @@ export default async function Layout({ children, params }: Props) {
   return (
     <html lang={lang}>
       <body>
+        <CursorWithStars />
         <Header params={params} />
         <main className="pt-16">{children}</main>
       </body>

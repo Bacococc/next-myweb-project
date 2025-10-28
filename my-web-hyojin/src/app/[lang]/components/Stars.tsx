@@ -22,10 +22,9 @@ const STAR_COLORS = [
   'rgb(255, 158, 206)',
 ];
 
-// 마진 설정
 const MARGIN = {
-  left: 40,
-  right: 40,
+  left: 60,
+  right: 60,
   top: 100,
   bottom: 0,
 };
@@ -42,7 +41,7 @@ export default function Stars({ onMouseMove }: StarsProps) {
       const minX = MARGIN.left;
       const minY = MARGIN.top;
 
-      for (let i = 0; i < 7; i++) {
+      for (let i = 0; i < 14; i++) {
         newStars.push({
           id: i,
           x: Math.random() * (maxX - minX) + minX,
@@ -77,13 +76,13 @@ export default function Stars({ onMouseMove }: StarsProps) {
       {stars.map((star) => (
         <div
           key={star.id}
-          className="fixed pointer-events-none"
+          className="fixed pointer-events-none min-h-screen"
           style={{
             left: `${star.x}px`,
             top: `${star.y}px`,
             fontSize: `${star.size}px`,
             color: star.color,
-            zIndex: 2,
+            zIndex: 1,
           }}
         >
           ★

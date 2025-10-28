@@ -15,7 +15,6 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <div>
-        <CursorWithStars />
         <Toast />
         <h1>{dict.greeting}</h1>
       </div>
