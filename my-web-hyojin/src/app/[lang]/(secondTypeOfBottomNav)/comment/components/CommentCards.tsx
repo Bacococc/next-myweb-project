@@ -61,7 +61,7 @@ export default function CommentCard() {
       </div>
 
       <Link href="/comment/post"
-        className="fixed bottom-8 right-8 bg-white/30 backdrop-blur-lg text-white text-sm px-6 py-3 rounded-full shadow-2xl hover:bg-white/50 hover:text-black transition-colors z-50">
+        className="fixed bottom-8 right-8 bg-white/30 backdrop-blur-lg text-white text-sm px-6 py-3 rounded-full shadow-2xl hover:bg-white/60 transition-colors z-50">
         Leave a comment
       </Link>
 
