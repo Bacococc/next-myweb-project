@@ -40,7 +40,7 @@ export default function CommentCard() {
   return (
     <div className="relative w-2/5 min-h-screen flex justify-center mt-8 p-2 mb-10">
       <p className="text-white text-9xl font-extrabold mt-4 z-1 fixed">Comment!</p>
-      <div className="space-y-6 flex flex-col items-center w-full max-w-xl mx-auto z-50 mt-24">
+      <div className="space-y-6 flex flex-col items-center w-full max-w-xl mx-auto z-40 mt-24">
         {entries.map((comment) => (
           <div key={comment.id} className="relative p-6 rounded-xl bg-white/20 backdrop-blur shadow-2xl flex flex-col gap-2 transition hover:scale-[1.01] w-full">
             <p className="text-white text-lg mb-4 mt-2">{comment.content}</p>
