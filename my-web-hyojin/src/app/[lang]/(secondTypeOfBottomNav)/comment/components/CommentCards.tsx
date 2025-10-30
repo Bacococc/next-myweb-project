@@ -42,7 +42,7 @@ export default function CommentCard() {
       <p className="text-white text-9xl font-extrabold mt-4 z-1 fixed">Comment!</p>
       <div className="space-y-6 flex flex-col items-center w-full max-w-xl mx-auto z-40 mt-24">
         {entries.map((comment) => (
-          <div key={comment.id} className="relative p-6 rounded-xl bg-white/20 backdrop-blur shadow-2xl flex flex-col gap-2 transition hover:scale-[1.01] w-full">
+          <div key={comment.id} className="relative p-6 rounded-xl border border-gray-100/5 backdrop-blur shadow-2xl flex flex-col gap-2 transition hover:scale-[1.01] w-full">
             <p className="text-white text-lg mb-4 mt-2">{comment.content}</p>
             <div className="flex justify-between gap-4 text-gray-100 font-light text-xs">
               <div className="text-gray-300 hover:text-white">
@@ -51,7 +51,7 @@ export default function CommentCard() {
               </div>
               <button 
                 onClick={() => handleDelete(comment.id, comment.password)} 
-                className="text-gray-300 hover:text-white text-xs backdrop-blur rounded-xl px-2 py-1 font-medium shadow animate-shaking"
+                className="text-gray-400 hover:text-white hover:scale-[1.01] text-xs backdrop-blur rounded-xl px-2 py-1 font-medium shadow animate-shaking"
               >
                 Delete
               </button>

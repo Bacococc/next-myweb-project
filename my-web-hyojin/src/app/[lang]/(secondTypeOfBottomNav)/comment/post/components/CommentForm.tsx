@@ -46,15 +46,15 @@ export default function CommentForm({ onSubmit }: CommentFormProps) {
   return (
     <div className="relative w-full flex justify-center mt-8 p-2">
       <p className="text-white text-9xl font-extrabold z-1 fixed mt-4">Comment!</p>
-      <form onSubmit={handleSubmit} className="bg-white/20 rounded-lg p-8 backdrop-blur z-50 mt-24 w-3/7">
-        <div className="grid grid-cols-2 gap-4 mb-6">
+      <form onSubmit={handleSubmit} className="rounded-lg border border-gray-50/5 p-8 backdrop-blur z-50 mt-24 w-3/7">
+        <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
             <input
               type="text"
               placeholder="Author"
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
-              className="text-sm w-full bg-transparent border-b border-gray-200 text-white placeholder-gray-100 focus:outline-none focus:border-white transition-colors px-2 py-2"
+              className="text-sm w-full bg-transparent border-b border-gray-100/30 text-white/90 placeholder-gray-100 focus:outline-none focus:border-white transition-colors px-2 py-2"
               required
             />
           </div>
@@ -64,7 +64,7 @@ export default function CommentForm({ onSubmit }: CommentFormProps) {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="text-sm w-full bg-transparent border-b border-gray-200 text-white placeholder-gray-100 focus:outline-none focus:border-white transition-colors px-2 py-2"
+              className="text-sm w-full bg-transparent border-b border-gray-100/30 text-white/90 placeholder-gray-100 focus:outline-none focus:border-white transition-colors px-2 py-2"
               required
             />
           </div>
@@ -76,7 +76,7 @@ export default function CommentForm({ onSubmit }: CommentFormProps) {
           placeholder="Write your comment..."
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          className="w-full bg-transparent border border-gray-100 text-white placeholder-gray-200 focus:outline-none focus:border-white/80 transition-colors rounded-md p-4 mb-6 resize-none h-50 overflow-scroll"
+          className="w-full bg-transparent border border-gray-100/30 text-white/90 placeholder-gray-200 focus:outline-none focus:border-white/80 transition-colors rounded-md p-4 mb-6 resize-none h-50 overflow-scroll"
           required
         />
 
@@ -84,7 +84,7 @@ export default function CommentForm({ onSubmit }: CommentFormProps) {
           <button
             type="submit"
             disabled={isLoading}
-            className="text-white px-16 py-2 bg-white/40 border border-white/70 rounded-full hover:bg-white/60 disabled:opacity-50 transition-colors"
+            className="text-md text-white px-12 py-2 bg-white/20 border border-gray-100/30 rounded-full hover:bg-white/40 disabled:opacity-50 transition-colors"
             onSubmit={(() => onSubmit)}
           >
             {isLoading ? 'Posting...' : 'Post'}
