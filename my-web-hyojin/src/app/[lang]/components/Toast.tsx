@@ -13,7 +13,7 @@ export default function Toast() {
 
   return (
     <div
-      className={`fixed left-1/2 top-2/5 transform -translate-x-1/2 bg-white/10 backdrop-blur px-12 py-6 rounded-md text-white z-50
+      className={`fixed left-1/2 top-2/5 transform -translate-x-1/2 border border-gray-50/10 backdrop-blur px-12 py-6 rounded-md text-white z-50
       transition-opacity duration-500 ${toast ? 'opacity-100' : 'opacity-0'}`}>
       <p>Put your Cursor on Stars!</p>
     </div>
