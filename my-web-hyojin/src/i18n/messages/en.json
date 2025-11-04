@@ -1,5 +1,75 @@
 {
   "greeting": "Hello!",
   "headerIntro": "Developer who loves to challenge",
-  "intro": ""
+  "intro": "",
+  "aboutContent1": "I aim to create websites that are easy to understand and accessible to everyone. I believe the web is more than just a screen—it can make someone’s day more convenient and enjoyable.",
+  "aboutContent2": "My interest in development began during my high school study abroad, when I discovered an interactive website made with HTML5 and JavaScript on YouTube. At the time, I didn’t even know what 'JavaScript' was, but I was inspired to create something similar.",
+  "aboutContent3": "From now on, I want to design experiences that connect people and technology closely, guided by user-centered thinking and careful attention.",
+  "timelineTitle" : "I believe every challenge is a chance to learn and every experience adds a new layer to who I am.",
+  "timelineItems": [
+    {
+      "date": "August 2020",
+      "title": "First Design Contest",
+      "description": "My very first competition — I had no idea what I was doing. I just wanted to get into my dream school, and I did! A small win that taught me the power of trying."
+    },
+    {
+      "date": "December 2021 ~ December 2022",
+      "title": "Studying Abroad in the U.S.",
+      "description": "Lived a year in the U.S. Learned to communicate, adapt, and stay strong. Solved a tough home stay issue on my own and came back with real confidence.",
+      "more": "y"
+    },
+    {
+      "date": "March 2023",
+      "title": "My First Job: Ice Cream Shop",
+      "description": "Turned challenges into smiles. Suggested better workflows, supported teammates, and made customers happier. Ended up promoted to manager — my first taste of leadership."
+    },
+    {
+      "date": "December 2023",
+      "title": "SCA Barista Certification",
+      "description": "Balanced work and study to earn an international barista license. Learned patience, precision, and how a single cup can brighten someone’s day."
+    },
+    {
+      "date": "July 2024",
+      "title": "AI Summer Camp & CO-WEEK",
+      "description": "Built my first AI project using MODI blocks. Spent a week living and coding with my teammates — that teamwork experience still shapes how I work today."
+    },
+    {
+      "date": "July 2024",
+      "title": "CO-WEEK Academy in KMU",
+      "description": "Joined a one-week AI and tech program at Keimyung University. Met students and professors from all over the country — an inspiring week of learning and connection."
+    },
+    {
+      "date": "January 2025",
+      "title": "Study Abroad in Germany: THU Ulm",
+      "description": "A month in Germany, studying and collaborating across cultures. Visited industries, joined a global project, and our team was named ‘Most Creative Team’. Gained a new sense of curiosity and courage.",
+      "more": "y"
+    },
+    {
+      "date": "April 2025",
+      "title": "Nepal Student Orientation Volunteer",
+      "description": "Helped new students from Nepal settle into dorm life. Translated guides, gave tours, and learned how meaningful it is to make someone feel welcomed."
+    },
+    {
+      "date": "July 2025",
+      "title": "AI Hackathon - AIM Challenge",
+      "description": "Led a team in an AI hackathon. Didn’t win, but learned more about teamwork, growth, and staying driven than any trophy could teach me."
+    },
+    {
+      "date": "April 2025",
+      "title": "Shinhan Hey Young Supporters",
+      "description": "Planned and ran creative marketing projects as part of Shinhan Bank’s Hey Young Supporters. Organized a campus booth and saw how ideas turn into impact.",
+      "more": "y"
+    },
+    {
+      "date": "June 2025",
+      "title": "Buddy Program & YJU Foreign Language Presentation Contest",
+      "description": "Worked with international students on a UCC project that won an excellence award. Shared ideas, learned cultures, and found that communication goes far beyond language."
+    },
+    {
+      "date": "August 2025",
+      "title": "Osaka IT Training",
+      "description": "Spent a month in Osaka for an IT training program. Improved my Japanese and made my dream of becoming a developer in Japan feel closer than ever.",
+      "more": "y"
+    }
+  ]
 }

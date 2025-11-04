@@ -1,5 +1,76 @@
 {
-  "greeting": "Hello!",
-  "headerIntro": "挑戦する開発者",
-  "intro": ""
+  "greeting": "こんにちは！",
+  "headerIntro": "挑戦を愛する開発者",
+  "intro": "",
+  "aboutContent1": "私は、誰にでも理解しやすく、差別なく利用できるウェブサイトを作ることを目指しています。ウェブは単なる画面ではなく、誰かの一日を少し便利で楽しいものにできる空間だと考えています。",
+  "aboutContent2": "開発への興味は、高校の留学中に始まりました。ある日、YouTubeでHTML5とJavaScriptで作られたインタラクティブなウェブサイトを見たのです。当時は『JavaScript』という言葉さえ知りませんでしたが、その反応するウェブの仕組みに感動し、「自分もこういうものを作りたい」と思いました。",
+  "aboutContent3": "これからは、ユーザー中心の考え方と細やかな配慮をもとに、人と技術を身近に繋ぐ体験を自ら設計していきたいです。",
+  "timelineTitle" : "I believe every challenge is a chance to learn and every experience adds a new layer to who I am.",
+  "timelineItems": [
+    {
+      "date": "August 2020",
+      "title": "First Design Contest",
+      "description": "初めてデザインコンテストに挑戦しました。右も左も分からない状態でしたが、夢見ていた学校に入りたい一心で取り組み、結果的に受賞しました。「挑戦する勇気」の大切さを初めて実感した瞬間でした。"
+    },
+    {
+      "date": "December 2021 ~ December 2022",
+      "title": "Studying Abroad in the U.S.",
+      "description": "アメリカで1年間留学し、周囲に韓国人がいない環境の中で、自分の力で適応し成長しました。多くの友人に出会い、お互いの文化を学び合えた貴重な経験となりました。",
+      "more": "y"
+    },
+    {
+      "date": "March 2023",
+      "title": "My First Job: Ice Cream Shop",
+      "description": "初めてのアルバイトを経験しました。業務の改善を提案し、同僚をサポートしながらお客様の体験をより良くするために努力しました。最終的にマネージャーに昇進し、初めてリーダーシップを学びました。",
+      "more": "y"
+    },
+    {
+      "date": "December 2023",
+      "title": "SCA Barista Certification",
+      "description": "学業と仕事を両立しながら国際バリスタ資格（SCA）を取得しました。コーヒーを通して、細部へのこだわりや忍耐力、そして小さな心配りが人の一日を変えることを学びました。"
+    },
+    {
+      "date": "July 2024",
+      "title": "AI Summer Camp & CO-WEEK",
+      "description": "MODIブロックを使って機械学習を学び、初めてAIプロジェクトを完成させました。1週間チームメンバーと同じ宿舎で過ごし、課題に取り組みながら協力した経験は、今のチーム開発に大きく活かされています。"
+    },
+    {
+      "date": "July 2024",
+      "title": "CO-WEEK Academy in KMU",
+      "description": "啓明大学で開催されたAIと第四次産業革命に関する1週間のプログラムに参加しました。多くの大学教授の講義を受け、全国から集まった学生と交流することができた刺激的な経験でした。"
+    },
+    {
+      "date": "January 2025",
+      "title": "Study Abroad in Germany: THU Ulm",
+      "description": "ドイツ・ウルム工科大学で1ヶ月間学び、異なる文化の中で協力し合うことを経験しました。現地の企業を訪問し、最終週にはグローバル産学連携プロジェクトに参加。私たちのチームは「最も創造的なチーム」として表彰されました。",
+      "more": "y"
+    },
+    {
+      "date": "April 2025",
+      "title": "Nepal Student Orientation Volunteer",
+      "description": "ネパールからの新入生が寮生活にスムーズに適応できるようサポートしました。英語で案内資料を翻訳し、キャンパス案内を行いながら、「歓迎する」という行動の温かさを感じました。"
+    },
+    {
+      "date": "July 2025",
+      "title": "AI Hackathon - AIM Challenge",
+      "description": "AIハッカソンにチームリーダーとして参加しました。受賞には至りませんでしたが、チームワークの大切さと挑戦から得られる成長を実感し、新たなモチベーションを得ました。"
+    },
+    {
+      "date": "April 2025",
+      "title": "Shinhan Hey Young Supporters",
+      "description": "新韓銀行の「Hey Young」サポーターズとして3ヶ月間活動しました。チームで企画から実行までを担当し、ビジネスとクリエイティブの融合を体感しました。大学内でHey Youngアプリのプロモーションブースを自ら企画・運営しました。",
+      "more": "y"
+    },
+    {
+      "date": "June 2025",
+      "title": "Buddy Program & YJU Foreign Language Presentation Contest",
+      "description": "外国人留学生とUCCプロジェクトを制作し、優秀賞を受賞しました。多国籍のメンバーと協力して企画から文化交流、学習支援まで行い、コミュニケーションの重要性を実感しました。また、英語プレゼンテーション大会では留学生の協力を得て準備を進め、受賞することができ、協働力と発信力をさらに高めることができました。"
+    },
+    {
+      "date": "August 2025",
+      "title": "Osaka IT Training",
+      "description": "日本で1ヶ月間IT研修を受け、日本語力を磨くとともに、日本で開発者として働きたいという夢をより具体的に描けるようになりました。",
+      "more": "y"
+    }
+  ]
 }
