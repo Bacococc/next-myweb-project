@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @import "tailwindcss";
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -24,6 +27,71 @@
   to { opacity: 1; }
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+/* -----------------------------
+   Scale In
+----------------------------- */
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-scaleIn {
+  animation: scaleIn 0.7s ease-out both;
+}
+
+/* -----------------------------
+   Fade In + Rotate (살짝 회전하며 등장)
+----------------------------- */
+@keyframes fadeInRotate {
+  0% {
+    opacity: 0;
+    transform: rotate(-5deg) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(0);
+  }
+}
+.animate-fadeInRotate {
+  animation: fadeInRotate 0.8s ease-out both;
+}
+
+/* -----------------------------
+   Hover Zoom
+----------------------------- */
+.hover-zoom:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* -----------------------------
+   Hover Glow
+----------------------------- */
+.hover-glow:hover {
+  filter: brightness(1.1);
+  transition: filter 0.3s ease;
+}
+
+
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out;
 }
@@ -43,13 +111,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #171717;
+    --foreground: #171717;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
