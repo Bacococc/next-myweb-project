@@ -1,19 +1,16 @@
-import { getDictionary } from "@/i18n/config";
+'use client';
+
+import { useLang, useDict } from "@/i18n/langContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { parseLang } from "@/i18n/utils";
 import Link from "next/link";
 
-interface Props {
-  params: { lang: string };
-}
-
-export default async function Header({ params }: Props) {
-  const lang = parseLang(params.lang);
-  const dic = await getDictionary(lang);
+export default function Header() {
+  const lang = useLang();
+  const dic = useDict();
 
   return (
     <header 
-      className="fixed top-1 left-0 right-0 z-50"
+      className="fixed top-0 left-0 right-0 z-50 bg-neutral-900/50 backdrop-blur pt-2"
       role="banner"
     >
       <nav 
@@ -35,7 +32,6 @@ export default async function Header({ params }: Props) {
             </span>
           </Link>
 
-          {/* Navigation Links */}
           <div className="flex items-center gap-2 sm:gap-4">
             <LanguageSwitcher currentLang={lang} />
             
