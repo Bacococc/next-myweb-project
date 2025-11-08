@@ -1,4 +1,4 @@
-import CommentForm from "./components/CommentForm";
+import CommentForm from "../../components/CommentForm";
 
 export default function PostCommentPage() {
 

@@ -1,4 +1,4 @@
-import AboutContents from "./components/AboutContents";
+import AboutContents from "../components/AboutContents";
 
 export default function AboutHyojinPage({ params }: { params: { lang: string } }) {
   return (
