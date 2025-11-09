@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
-  {title: "Dutchpay - Global Campus Mate", content: "외국인 유학생들을 위한 간편 송금 & 정산 웹 서비스로, 다국적 환경에서도 손쉽게 더치페이를 할 수 있는 플랫폼입니다.", image: "/images/project1.png", stacks: ["Next.js", "TypeScript", "Nest.js", "MySQL", "Docker", "Team Project"]},
-  {title: "Dutchpay - Global Campus Mate", content: "외국인 유학생들을 위한 간편 송금 & 정산 웹 서비스로, 다국적 환경에서도 손쉽게 더치페이를 할 수 있는 플랫폼입니다.", image: "/images/project1.png", stacks: ["Next.js", "TypeScript", "Nest.js", "MySQL", "Docker", "Team Project"]},
+  {title: "Dutchpay - Global Campus Mate", content: "외국인 유학생들을 위한 간편 송금 & 정산 웹 서비스로, 다국적 환경에서도 손쉽게 더치페이를 할 수 있는 플랫폼입니다.", image: "/images/projects/1.png", stacks: ["Next.js", "TypeScript", "Nest.js", "MySQL", "Docker", "Team Project"]},
+  {title: "Dutchpay - Global Campus Mate", content: "외국인 유학생들을 위한 간편 송금 & 정산 웹 서비스로, 다국적 환경에서도 손쉽게 더치페이를 할 수 있는 플랫폼입니다.", image: "/images/projects/1.png", stacks: ["Next.js", "TypeScript", "Nest.js", "MySQL", "Docker", "Team Project"]},
 ];
 
 export default function ProjectsCompo() {
@@ -20,15 +21,17 @@ export default function ProjectsCompo() {
             key={idx}
             className="relative hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 ease-out overflow-hidden w-full">
             {/* 이미지 */}
-            <div className="relative w-full h-90">
-              <Image
-                src={item.image}
-                alt={`${item.title} project main image`}
-                fill
-                className="object-cover rounded-sm"
-              />
-            </div>
-
+            <Link href={`/project/${idx + 1}`}>
+              <div className="relative w-full h-90">
+                <Image
+                  src={`/images/projectMain/${idx + 1}.png`}
+                  alt={`${item.title} project main image`}
+                  fill
+                  className="object-cover rounded-sm"
+                />
+              </div>
+            </Link>
+            
             {/* 내용 */}
             <div className="p-6 flex flex-col justify-between min-h-[160px]">
               <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
