@@ -15,9 +15,20 @@ export function middleware(request: NextRequest) {
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
+  if (pathname.startsWith('/admin') && pathname !== '/admin/login') {
+    const token = request.cookies.get('admin_token')?.value;
+    if (!token || token !== process.env.ADMIN_TOKEN) {
+      const loginUrl = new URL('/admin/login', request.url);
+      loginUrl.search = `?from=${encodeURIComponent(pathname)}`;
+      return NextResponse.redirect(loginUrl);
+    }
+  }
+
   if (pathnameIsMissingLocale) {
-    const lang = request.cookies.get('lang')?.value || 'ja';
-    return NextResponse.redirect(new URL(`/${lang}${pathname}`, request.url));
+    if (!pathname.startsWith('/admin')) {
+      const lang = request.cookies.get('lang')?.value || 'ja';
+      return NextResponse.redirect(new URL(`/${lang}${pathname}`, request.url));
+    }
   }
 }
 

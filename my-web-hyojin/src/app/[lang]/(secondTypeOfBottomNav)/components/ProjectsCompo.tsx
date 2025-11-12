@@ -30,7 +30,6 @@ export default function ProjectsCompo() {
                   className="object-cover rounded-sm"
                 />
               </div>
-            </Link>
             
             {/* 내용 */}
             <div className="p-6 flex flex-col justify-between min-h-[160px]">
@@ -50,7 +49,9 @@ export default function ProjectsCompo() {
                 ))}
               </div>
             </div>
+            </Link>
           </div>
+          
         ))}
       </div>
     </section>
