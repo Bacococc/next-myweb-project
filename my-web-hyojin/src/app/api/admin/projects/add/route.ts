@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/firebaseConfig";
 import { collection, doc, setDoc } from "firebase/firestore";
 
+// POST API 
+// 백엔드 API 서버(Nest 등)를 따로 두지 않고, Next.js 자체 API 기능을 활용
 export async function POST(req: NextRequest) {
   const data = await req.json();
   const { id, ...rest } = data; // 사용자가 입력한 ID 분리

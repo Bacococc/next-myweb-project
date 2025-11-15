@@ -24,9 +24,9 @@ export default function ProjectDetailCompo() {
         const docRef = doc(db, "projects", projectId);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) setProject(docSnap.data());
-        else console.log("❌ 해당 프로젝트 문서를 찾을 수 없습니다.");
+        else console.log("해당 프로젝트 문서를 찾을 수 없습니다.");
       } catch (error) {
-        console.error("🔥 Firestore 데이터 가져오기 오류:", error);
+        console.error("Firestore 데이터 가져오기 오류:", error);
       }
     };
     fetchProject();
