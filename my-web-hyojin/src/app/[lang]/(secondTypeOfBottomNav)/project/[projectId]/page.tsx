@@ -4,7 +4,7 @@ export default function ProjectDetailPage({ params }: { params: { lang: string }
 
   return (
     <div>
-      <ProjectDetailCompo params={params} />
+      <ProjectDetailCompo />
 
     </div>
   )

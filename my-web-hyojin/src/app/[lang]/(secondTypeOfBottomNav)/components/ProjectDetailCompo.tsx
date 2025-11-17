@@ -7,7 +7,6 @@ import { db } from "@/firebaseConfig";
 import Image from "next/image";
 import Link from "next/link";
 import { parseLang } from "@/i18n/utils";
-import Skeleton from 'react-loading-skeleton';
 
 export default function ProjectDetailCompo() {
   const params = useParams();

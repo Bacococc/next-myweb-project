@@ -64,35 +64,35 @@ export default function AdminProjectPostPage() {
           name="id"
           placeholder="ID"
           onChange={handleChange}
-          className="input"
+          className="input w-full border p-2 border-gray-400 rounded-sm"
         />
 
         <input
           name="title"
           placeholder="Title"
           onChange={handleChange}
-          className="input"
+          className="input w-full border p-2 border-gray-400 rounded-sm"
         />
 
         <input
           name="content.en"
           placeholder="Content(EN)"
           onChange={handleChange}
-          className="input"
+          className="input w-full border p-2 border-gray-400 rounded-sm"
         />
 
         <input
           name="content.ja"
           placeholder="Content(JP)"
           onChange={handleChange}
-          className="input"
+          className="input w-full border p-2 border-gray-400 rounded-sm"
         />
 
         <input
           name="content.ko"
           placeholder="Content(KR)"
           onChange={handleChange}
-          className="input"
+          className="input w-full border p-2 border-gray-400 rounded-sm"
         />
 
         <label className="flex items-center gap-2 text-sm">
@@ -104,26 +104,26 @@ export default function AdminProjectPostPage() {
           name="link"
           placeholder="Link"
           onChange={handleChange}
-          className="input"
+          className="input w-full border p-2 border-gray-400 rounded-sm"
         />
 
         <input
           name="stacks"
           placeholder="Stacks (comma separated)"
           onChange={handleChange}
-          className="input"
+          className="input w-full border p-2 border-gray-400 rounded-sm"
         />
 
         <input
           name="team"
           placeholder="Team"
           onChange={handleChange}
-          className="input"
+          className="input w-full border p-2 border-gray-400 rounded-sm"
         />
 
         <button
           onClick={addProject}
-          className="w-full bg-sky-500 hover:bg-sky-600 text-white py-2 rounded-lg transition"
+          className="w-full bg-black text-white py-2 rounded-lg transition"
         >
           ADD
         </button>
