@@ -17,10 +17,11 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
   }
 }
 
-export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: string }>}) {
   try {
     const data = await req.json();
-    const docRef = doc(db, "projects", params.id);
+    const { id } = await params;
+    const docRef = doc(db, "projects", id);
     await updateDoc(docRef, data);
     return NextResponse.json({ message: "수정 성공" }, { status: 200 });
   } catch (error) {
