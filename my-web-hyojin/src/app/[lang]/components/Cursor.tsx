@@ -31,7 +31,7 @@ export default function Cursor({ color = 'rgb(147, 206, 230)' }: CursorProps) {
   return (
     <div
       ref={cursorRef}
-      className="fixed w-16 h-16 rounded-full pointer-events-none transition-colors duration-150"
+      className="fixed w-16 h-16 rounded-full pointer-events-none transition-colors duration-150 z-1"
       style={{
         backgroundColor: displayColor,
         transform: 'translate(-50%, -50%)',

@@ -76,7 +76,7 @@ export default function Stars({ onMouseMove }: StarsProps) {
       {stars.map((star) => (
         <div
           key={star.id}
-          className="fixed pointer-events-none min-h-screen"
+          className="fixed pointer-events-none min-h-screen z-1"
           style={{
             left: `${star.x}px`,
             top: `${star.y}px`,

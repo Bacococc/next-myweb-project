@@ -41,6 +41,34 @@
   animation: fadeInUp 0.8s ease-out both;
 }
 
+@keyframes openTop {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes openBottom {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+.animate-openTop {
+  transform-origin: top;
+  animation: openTop 1s ease-in-out forwards;
+}
+
+.animate-openBottom {
+  transform-origin: bottom;
+  animation: openBottom 1s ease-in-out forwards;
+}
+
 /* -----------------------------
    Scale In
 ----------------------------- */

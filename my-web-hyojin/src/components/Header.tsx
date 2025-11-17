@@ -3,10 +3,25 @@
 import { useLang, useDict } from "@/i18n/langContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Link from "next/link";
+import Toast from "@/app/[lang]/components/Toast";
+import { useState } from "react";
 
 export default function Header() {
   const lang = useLang();
   const dic = useDict();
+  const email = "hinicestore@gamil.com";
+  const [showToast, setShowToast] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText(email)
+      .then(() => {
+        setShowToast(true);  // 토스트 시각화 시작
+        setTimeout(() => setShowToast(false), 2000); // 2초 후 자동 숨김
+      })
+      .catch(() => {
+        alert("복사에 실패했습니다.");
+      });
+  };
 
   return (
     <header 
@@ -45,13 +60,20 @@ export default function Header() {
               GitHub
             </a>
             
-            <Link
-              href={`/${lang}/contact`}
+            <button
+              onClick={copyEmail}
               className="text-white text-sm sm:text-base px-3 py-2 rounded-xs focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-black transition-all hover:text-gray-300"
-              aria-label="Contact page"
+              aria-label="Copy email"
             >
               Contact
-            </Link>
+            </button>
+
+            {showToast && (
+              <div className="justify-center items-center">
+                <Toast message="Email copied!" />
+              </div>
+            )}
+
           </div>
         </div>
       </nav>

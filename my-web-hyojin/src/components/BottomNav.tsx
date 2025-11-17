@@ -15,12 +15,12 @@ export default async function BottomNav() {
           <Link href="/project" className="hover:text-gray-100 focus:ring-2 focus:ring-gray-400 focus:outline-none focus:ring-offset-2 focus:ring-offset-black rounded-sm p-2">
             Projects
           </Link>
-          <Link href="/programs" className="hover:text-gray-100 focus:ring-2 focus:ring-gray-400 focus:outline-none focus:ring-offset-2 focus:ring-offset-black rounded-sm p-2">
-            Programs
-          </Link>
           <Link href="/comment" className="hover:text-gray-100 focus:ring-2 focus:ring-gray-400 focus:outline-none focus:ring-offset-2 focus:ring-offset-black rounded-sm p-2">
             Comments
           </Link>
+          <a href="https://drive.google.com/drive/folders/1PT0wl841gO2-TI_WroQ-6ggAkj3TMuMT?usp=drive_link" className="hover:text-gray-100 focus:ring-2 focus:ring-gray-400 focus:outline-none focus:ring-offset-2 focus:ring-offset-black rounded-sm p-2">
+            DL Portfolio
+          </a>
         </div>
         
       </nav>

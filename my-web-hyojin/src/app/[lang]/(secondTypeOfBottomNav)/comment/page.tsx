@@ -1,4 +1,4 @@
-import CommentCard from "./components/CommentCards";
+import CommentCard from "../components/CommentCards";
 
 export default function CommentPage() {
   return (
