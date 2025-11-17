@@ -2,7 +2,11 @@
 
 import Toast from "./Toast";
 
-export default function HomeClient({ dict }: { dict: any }) {
+interface Props {
+  dict: { greeting: string };
+}
+
+export default function HomeClient({ dict }: Props) {
   return (
     <div>
       <Toast message="Put your Cursor on Stars!"  />
