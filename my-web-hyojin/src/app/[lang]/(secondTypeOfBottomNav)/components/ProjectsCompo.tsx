@@ -51,7 +51,9 @@ export default function ProjectsCompo() {
 
         setProjects(ProjectList);
       } catch (error) {
-        setProjects([]);
+        if(error instanceof Error){
+          setProjects([]);
+        }
       }
     };
 
