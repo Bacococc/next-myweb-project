@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import CopyRight from '../../components/CopyRight';
+import CopyRight from '../components/CopyRight';
 
 interface Props {
   children: ReactNode;
