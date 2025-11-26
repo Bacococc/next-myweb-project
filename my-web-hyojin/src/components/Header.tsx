@@ -5,6 +5,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Link from "next/link";
 import Toast from "@/app/[lang]/components/Toast";
 import { useState } from "react";
+import type { ReactNode } from "react"; // ReactNode import (선택 사항)
 
 export default function Header() {
   const lang = useLang();
@@ -23,6 +24,8 @@ export default function Header() {
       });
   };
 
+  const headerIntroText = dic.headerIntro as string; 
+
   return (
     <header 
       className="fixed top-0 left-0 right-0 z-50 bg-neutral-900/50 backdrop-blur pt-2"
@@ -37,13 +40,15 @@ export default function Header() {
           <Link
             href={`/${lang}`}
             className="group flex flex-col text-left focus:ring-2 focus:ring-gray-400 focus:outline-none focus:ring-offset-2 focus:ring-offset-black rounded-xs px-3 py-2 transition-all"
-            aria-label={`Home - ${dic.headerIntro}`}
+            // 💡 타입 단언 적용 (headerIntroText 사용)
+            aria-label={`Home - ${headerIntroText}`} 
           >
             <span className="text-white text-lg sm:text-md leading-tight">
               Hyojin Park
             </span>
             <span className="text-gray-200 text-sm font-semibold sm:text-sm transition-colors">
-              {dic.headerIntro}
+              {/* 💡 타입 단언 적용 (headerIntroText 사용) */}
+              {headerIntroText}
             </span>
           </Link>
 

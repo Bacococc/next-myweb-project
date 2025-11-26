@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import React from 'react';
 
 interface Content {
   ko: string;
@@ -18,6 +19,8 @@ interface Project {
   link: string;
 }
 
+type UpdatableProject = Omit<Project, 'id'>; 
+
 export default function AdminEditProjectPage() {
   const params = useParams();
   const id = typeof params.id === "string" ? params.id : Array.isArray(params.id) ? params.id[0] : "";
@@ -27,7 +30,7 @@ export default function AdminEditProjectPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [stacksText, setStacksText] = useState("");  // 초기값을 빈 문자열로 설정
+  const [stacksText, setStacksText] = useState("");
 
   useEffect(() => {
     if (!id) {
@@ -88,8 +91,10 @@ export default function AdminEditProjectPage() {
     setSaving(true);
     setError(null);
 
-    const updatableProject = { ...project };
-    delete updatableProject.id; 
+    // id를 제외하고 나머지 속성만 updatableProject에 저장
+    const { id: _, ...updatableData } = project; 
+    
+    const updatableProject = updatableData as UpdatableProject; 
 
     try {
       const res = await fetch(`/api/admin/projects/update/${id}`, {

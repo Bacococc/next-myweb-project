@@ -8,11 +8,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { parseLang } from "@/i18n/utils";
 
+interface Project {
+  id: string; 
+  title: string;
+  team: string;
+  content: {
+    ko: string;
+    en: string;
+    ja: string;
+  };
+  stacks: string[]; 
+  isMobile: boolean;
+  link: string;
+};
+
 export default function ProjectDetailCompo() {
   const params = useParams();
   const { lang, projectId } = params as { lang: string; projectId: string };
 
-  const [project, setProject] = useState<any>(null);
+  const [project, setProject] = useState<Project|null>(null);
   const parsedLang = parseLang(lang);
   const [showOverlay, setShowOverlay] = useState(true);
 
@@ -22,7 +36,10 @@ export default function ProjectDetailCompo() {
       try {
         const docRef = doc(db, "projects", projectId);
         const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) setProject(docSnap.data());
+        if (docSnap.exists()) {
+          const data = docSnap.data() as Project;
+          setProject(data);
+        }
         else console.log("해당 프로젝트 문서를 찾을 수 없습니다.");
       } catch (error) {
         console.error("Firestore 데이터 가져오기 오류:", error);

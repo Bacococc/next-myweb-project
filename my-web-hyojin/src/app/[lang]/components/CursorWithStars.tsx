@@ -1,4 +1,3 @@
-// src/components/CursorWithStars.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -28,8 +27,8 @@ export default function CursorWithStars() {
   }, []);
 
   const handleMouseMove = (x: number, y: number, stars: Star[]) => {
-    // 별과의 거리 계산
-    let hoveredStar: Star | null = null;
+
+    let hoveredStar: Star | undefined = undefined;
     let closestDistance = 40;
 
     stars.forEach((star) => {
@@ -41,11 +40,12 @@ export default function CursorWithStars() {
     });
 
     // 호버된 별이 있으면만 색상 변경
-    if (hoveredStar) {
-      setCursorColor(hoveredStar.color);
-      Cookies.set('cursorColor', hoveredStar.color, { expires: 365 });
+    if (hoveredStar !== undefined) {
+      const confirmedStar = hoveredStar as Star;
+      
+      setCursorColor(confirmedStar.color);
+      Cookies.set('cursorColor', confirmedStar.color, { expires: 365 });
     }
-    // 별이 없으면 현재 색상 유지
   };
 
   return (

@@ -1,9 +1,23 @@
+// @/i18n/langContext.tsx (최종 타입 정의 통합)
+
 'use client';
 
 import { createContext, useContext } from 'react';
 import type { Lang } from './utils';
+import React from 'react';
 
-type Dictionary = Record<string, string>;
+export interface TimelineItem {
+  date: string;
+  title: string;
+  description: string;
+  more?: string | null; 
+}
+
+export interface Dictionary {
+  timelineTitle: string; 
+  timelineItems: TimelineItem[]; 
+  [key: string]: unknown; // 나머지 키에 대한 유연한 타입
+}
 
 interface LangContextType {
   lang: Lang;

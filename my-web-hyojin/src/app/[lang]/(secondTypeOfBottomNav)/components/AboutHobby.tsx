@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-export default function AboutHobby() {
-  const imagesTravel = [
+const imagesTravel = [
     { src: "/images/Travel9.png", position: "top-28 right-1/7 -translate-x-1/2 rotate-[-5deg]" },
     { src: "/images/Travel12.png", position: "top-24 left-1 -translate-x-1/2 rotate-[-5deg]" },
     { src: "/images/Travel4.jpg", position: "top-46 left-1/20 rotate-[-3deg]" },
@@ -19,7 +18,7 @@ export default function AboutHobby() {
     { src: "/images/Travel14.png", position: "top-10 right-1 -translate-x-1/2 rotate-[-5deg]" },
   ];
 
-  const imagesBaking = [
+const imagesBaking = [
     { src: "/images/Baking13.png", position: "top-10 left-1/10 rotate-[-4deg]" },
     { src: "/images/Baking7.png", position: "top-44 left-1/2 rotate-[-4deg]" },
     { src: "/images/Baking.png", position: "top-20 left-1/6 rotate-3" },
@@ -33,6 +32,7 @@ export default function AboutHobby() {
     { src: "/images/Baking12.png", position: "top-50 left-1/9 rotate-[-4deg]" },
   ];
 
+export default function AboutHobby() {
   const travelRef = useRef<HTMLDivElement>(null);
   const bakingRef = useRef<HTMLDivElement>(null);
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
