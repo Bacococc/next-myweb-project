@@ -25,7 +25,7 @@ export default async function AboutContents({ params }: Props) {
           <p className="py-2 text-md text-gray-300 tracking-wider font-light animate-fadeIn">{dic.aboutContent3}</p>
           </div>
               <div className="justify-end">
-          <Image src="/Images/Omurice.png" alt="Hyojin holding Omurice" width={400} height={400} 
+          <Image src="/images/Omurice.png" alt="Hyojin holding Omurice" width={400} height={400} 
             className="mt-10 p-2 animate-fadeIn" 
           />
         </div>
