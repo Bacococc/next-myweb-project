@@ -22,6 +22,9 @@ export default async function Layout({ children, params }: Props) {
 
   return (
     <html lang={parsedLang}>
+      <head>
+        <link rel='icon' href='/images/free-icon-font-star-17511709.svg' type='images/svg' sizes='16' />
+      </head>
       <body>
         <LangProvider lang={parsedLang} dict={dict}>
           <CursorWithStars />
